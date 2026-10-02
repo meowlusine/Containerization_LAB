@@ -6,49 +6,47 @@ secrets
 .docker-auth
 .gh-auth
 
-# STUDENT-TASK(TD02): complete the context policy. Exclude GitHub metadata,
-# evidence/submission packs, local environments, caches, logs, backups and
-# tests that are not required by the runtime image. Prove the effective
-# context instead of treating this comment as evidence.
-
-#GitHub metadata
+# GitHub metadata
 .github
 .gitignore
 .gitattributes
 
-#Evidence / submission packs
+# Evidence / submission packs
 evidence
-submission
+release.env
 *.zip
 *.tar
 *.tar.gz
 
-#Local environments and caches
+# Local environments and caches
 .venv
 venv
 __pycache__
-*.pyc
+*.py[cod]
 .pytest_cache
 .mypy_cache
 .ruff_cache
 .coverage
 htmlcov
+.course
+.course-operations.log
 
 # Logs and backups
 *.log
-*.bak
-*.sql.gz
 backups
+*.bak
 
 # Not needed by the runtime image
 tests
 requirements-dev.in
 requirements-dev.txt
-project_starter
+requirements.in
 compose.yaml
 nginx
 db
-Dockerfile
-.dockerignore
+deploy
+README.md
 .vscode
 .idea
+Dockerfile
+.dockerignore
